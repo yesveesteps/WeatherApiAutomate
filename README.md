@@ -10,14 +10,14 @@ A Java15 JDK, node js, Maven (3.8.1 recommended) and an IDE of your choice, I ha
 
 <h2> Running the mock server </h2>
 
-There is a simple node js server component shipped with this project, this is a simple user validation service. [https://github.com/yesveesteps/QFFUserService] . Checkout the code then peform the steps below.
+There is a simple node js server component shipped with this project, called user validation service. [https://github.com/yesveesteps/QFFUserService] . Checkout the code then peform the steps below.
 
 1) run the user validation mock server with the command below
 
 - npm i
 - npm start
 
-This will start a server for user validation service at port 3000.
+This will start a http server at port 3000.
 
 <h2> Running the Test suite </h2>
 
@@ -50,6 +50,7 @@ mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 ├── pom.xml                 # Build file
 ├── testng.xml
 └── README.md
+
 
 <h2> Report: </h2>
 
