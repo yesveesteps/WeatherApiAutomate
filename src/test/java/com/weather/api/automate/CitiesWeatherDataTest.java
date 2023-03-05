@@ -64,8 +64,7 @@ public class CitiesWeatherDataTest {
 			password = config.getProperty("password");
 			multiCitiesFPath= config.getProperty("multipleCitiesList");
 			
-			
-			  if (validateUserURI != null) { validateUserSpec = new
+			if (validateUserURI != null) { validateUserSpec = new
 			  RequestSpecBuilder().setBaseUri(validateUserURI).build(); }
 			 
 		} catch (Exception e) {

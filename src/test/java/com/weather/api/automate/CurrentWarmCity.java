@@ -36,7 +36,6 @@ public class CurrentWarmCity {
 	protected static String captialCityFPath;
 	protected static Logger log = Logger.getLogger(CurrentWarmCity.class.getName());
 	protected final int HTTP_SUCCESS = 200;
-	
 	protected static WeatherUtils weatherUtil = new WeatherUtils();
 	
 	@BeforeTest
@@ -54,15 +53,13 @@ public class CurrentWarmCity {
 			password = config.getProperty("password");
 			captialCityFPath= config.getProperty("captialCitiesOfAustralia");
 			
-			
-			  if (validateUserURI != null) { validateUserSpec = new
+			if (validateUserURI != null) { validateUserSpec = new
 			  RequestSpecBuilder().setBaseUri(validateUserURI).build(); }
 			 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 	
 	/*AC3. “As a frequent flyer, 
@@ -111,9 +108,5 @@ public class CurrentWarmCity {
 			log.info("The given user is not a valid Frequent Flyer member");
 			Assert.assertEquals(statusCode, 200);
 		}
-		
-		
-		
 	}
-
 }

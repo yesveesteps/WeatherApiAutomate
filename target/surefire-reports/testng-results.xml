@@ -2,41 +2,41 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-06T06:21:17 AEDT" name="Suite" finished-at="2023-03-06T06:21:28 AEDT" duration-ms="10593">
+  <suite started-at="2023-03-06T06:33:51 AEDT" name="Suite" finished-at="2023-03-06T06:34:02 AEDT" duration-ms="10600">
     <groups>
       <group name="regression">
-        <method signature="CitiesWeatherDataTest.TestWeatherForMultipleCities()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@20d28811]" name="TestWeatherForMultipleCities" class="com.weather.api.automate.CitiesWeatherDataTest"/>
-        <method signature="CurrentWarmCity.FindWarmestCapitalCityInAustrlia()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@4b14c583]" name="FindWarmestCapitalCityInAustrlia" class="com.weather.api.automate.CurrentWarmCity"/>
-        <method signature="LatLongWeatherData.TestWeatherDataLatLong()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@65466a6a]" name="TestWeatherDataLatLong" class="com.weather.api.automate.LatLongWeatherData"/>
+        <method signature="CitiesWeatherDataTest.TestWeatherForMultipleCities()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@16a0ee18]" name="TestWeatherForMultipleCities" class="com.weather.api.automate.CitiesWeatherDataTest"/>
+        <method signature="CurrentWarmCity.FindWarmestCapitalCityInAustrlia()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@16610890]" name="FindWarmestCapitalCityInAustrlia" class="com.weather.api.automate.CurrentWarmCity"/>
+        <method signature="LatLongWeatherData.TestWeatherDataLatLong()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@71def8f8]" name="TestWeatherDataLatLong" class="com.weather.api.automate.LatLongWeatherData"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2023-03-06T06:21:17 AEDT" name="Test" finished-at="2023-03-06T06:21:28 AEDT" duration-ms="10593">
+    <test started-at="2023-03-06T06:33:51 AEDT" name="Test" finished-at="2023-03-06T06:34:02 AEDT" duration-ms="10600">
       <class name="com.weather.api.automate.LatLongWeatherData">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@65466a6a]" started-at="2023-03-06T06:21:17 AEDT" name="setup" finished-at="2023-03-06T06:21:17 AEDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@71def8f8]" started-at="2023-03-06T06:33:52 AEDT" name="setup" finished-at="2023-03-06T06:33:52 AEDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TestWeatherDataLatLong()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@65466a6a]" started-at="2023-03-06T06:21:17 AEDT" name="TestWeatherDataLatLong" finished-at="2023-03-06T06:21:19 AEDT" duration-ms="2040" status="PASS">
+        <test-method signature="TestWeatherDataLatLong()[pri:0, instance:com.weather.api.automate.LatLongWeatherData@71def8f8]" started-at="2023-03-06T06:33:52 AEDT" name="TestWeatherDataLatLong" finished-at="2023-03-06T06:33:54 AEDT" duration-ms="2085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestWeatherDataLatLong -->
       </class> <!-- com.weather.api.automate.LatLongWeatherData -->
       <class name="com.weather.api.automate.CurrentWarmCity">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@4b14c583]" started-at="2023-03-06T06:21:17 AEDT" name="setup" finished-at="2023-03-06T06:21:17 AEDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@16610890]" started-at="2023-03-06T06:33:52 AEDT" name="setup" finished-at="2023-03-06T06:33:52 AEDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="FindWarmestCapitalCityInAustrlia()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@4b14c583]" started-at="2023-03-06T06:21:17 AEDT" name="FindWarmestCapitalCityInAustrlia" finished-at="2023-03-06T06:21:26 AEDT" duration-ms="8377" status="PASS">
+        <test-method signature="FindWarmestCapitalCityInAustrlia()[pri:0, instance:com.weather.api.automate.CurrentWarmCity@16610890]" started-at="2023-03-06T06:33:52 AEDT" name="FindWarmestCapitalCityInAustrlia" finished-at="2023-03-06T06:33:59 AEDT" duration-ms="7548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FindWarmestCapitalCityInAustrlia -->
       </class> <!-- com.weather.api.automate.CurrentWarmCity -->
       <class name="com.weather.api.automate.CitiesWeatherDataTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@20d28811]" started-at="2023-03-06T06:21:17 AEDT" name="setup" finished-at="2023-03-06T06:21:17 AEDT" duration-ms="354" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@16a0ee18]" started-at="2023-03-06T06:33:51 AEDT" name="setup" finished-at="2023-03-06T06:33:52 AEDT" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TestWeatherForMultipleCities()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@20d28811]" started-at="2023-03-06T06:21:17 AEDT" name="TestWeatherForMultipleCities" finished-at="2023-03-06T06:21:28 AEDT" duration-ms="10217" status="PASS">
+        <test-method signature="TestWeatherForMultipleCities()[pri:0, instance:com.weather.api.automate.CitiesWeatherDataTest@16a0ee18]" started-at="2023-03-06T06:33:52 AEDT" name="TestWeatherForMultipleCities" finished-at="2023-03-06T06:34:02 AEDT" duration-ms="10167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestWeatherForMultipleCities -->

@@ -53,9 +53,8 @@ public class LatLongWeatherData {
 			userName = config.getProperty("userName");
 			password = config.getProperty("password");
 			coordinatesFPath= config.getProperty("coordinatesFilePath");
-			
-			
-			  if (validateUserURI != null) { validateUserSpec = new
+				
+			if (validateUserURI != null) { validateUserSpec = new
 			  RequestSpecBuilder().setBaseUri(validateUserURI).build(); }
 			 
 		} catch (Exception e) {
@@ -92,18 +91,7 @@ public class LatLongWeatherData {
 							get("latitude"), (double)coordinatesJson.get("longitude"), key);
 			jsonPath = weatherResp.jsonPath();
 			temperature = jsonPath.getFloat("data[0].temp");
-			log.info("Temperature for the given lat long is:"+temperature);
-			
-			
-		
-		
-		
-		
-		
+			log.info("Temperature for the given lat long is:"+temperature);	
+		}
 	}
-	
-	
-	
-
-}
 }
