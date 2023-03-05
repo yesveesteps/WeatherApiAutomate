@@ -37,5 +37,7 @@ mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 Report:
 
 Test reports will be present in the Folder target/surefire-reports/emailable-report.html
+  <img width="854" alt="image" src="https://user-images.githubusercontent.com/22021276/222979205-9a77c3ea-1554-4e37-bd2e-c01401b85e60.png">
+
 
 
