@@ -131,21 +131,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.weather.api.automate.CurrentWarmCity</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="FindWarmestCapitalCityInAustrlia">
-                  </a> <!-- FindWarmestCapitalCityInAustrlia -->
-                  <span class="method-name">FindWarmestCapitalCityInAustrlia</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.weather.api.automate.LatLongWeatherData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -173,6 +158,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.weather.api.automate.CurrentWarmCity</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="FindWarmestCapitalCityInAustrlia">
+                  </a> <!-- FindWarmestCapitalCityInAustrlia -->
+                  <span class="method-name">FindWarmestCapitalCityInAustrlia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -183,7 +183,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;classes&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.weather.api.automate.CitiesWeatherDataTest&quot;/&gt;
       &lt;class name=&quot;com.weather.api.automate.CurrentWarmCity&quot;/&gt;
@@ -247,20 +247,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestWeatherForMultipleCities')
 data.setCell(0, 2, 'com.weather.api.automate.CitiesWeatherDataTest')
-data.setCell(0, 3, 10414);
+data.setCell(0, 3, 10514);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'FindWarmestCapitalCityInAustrlia')
 data.setCell(1, 2, 'com.weather.api.automate.CurrentWarmCity')
-data.setCell(1, 3, 5454);
+data.setCell(1, 3, 7854);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'TestWeatherDataLatLong')
 data.setCell(2, 2, 'com.weather.api.automate.LatLongWeatherData')
-data.setCell(2, 3, 911);
+data.setCell(2, 3, 2422);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -293,38 +293,38 @@ return data;
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.weather.api.automate.LatLongWeatherData</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup</span>
-                <span class="method-start">443 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">com.weather.api.automate.CurrentWarmCity</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">443 ms</span>
+                <span class="method-start">488 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.weather.api.automate.LatLongWeatherData</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">489 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.weather.api.automate.CitiesWeatherDataTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TestWeatherForMultipleCities</span>
-                <span class="method-start">459 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.weather.api.automate.CurrentWarmCity</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">FindWarmestCapitalCityInAustrlia</span>
-                <span class="method-start">10879 ms</span>
+                <span class="method-start">513 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.weather.api.automate.LatLongWeatherData</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TestWeatherDataLatLong</span>
-                <span class="method-start">16334 ms</span>
+                <span class="method-start">513 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.weather.api.automate.CurrentWarmCity</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">FindWarmestCapitalCityInAustrlia</span>
+                <span class="method-start">513 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

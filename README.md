@@ -2,6 +2,8 @@
 
 <h1> Weather API Automation Suite </h1>
 
+This project has automated API tests created using Rest Assured and TestNG framework for a REST API that provides weather data.
+
 <h2> What do I need? </h2>
 
 A Java15 JDK, node js, Maven (3.8.1 recommended) and an IDE of your choice, I have chosen eclipse
@@ -37,6 +39,17 @@ example:
 
 mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 
+<h2> Project Structure </h2>
+
+
+├── src
+|-----test/java             # Automated tests source classes and utils.
+├──---test/resources        # config files
+├── target	
+|-----surefire-reports	    # generated test reports.  
+├── pom.xml                 # Build file
+├── testng.xml
+└── README.md
 
 <h2> Report: </h2>
 
