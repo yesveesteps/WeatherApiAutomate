@@ -21,6 +21,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+/* This class will contain tests to find the
+ *  warmest capital city in Australia
+ * */
 public class CurrentWarmCity {
 	
 	protected static Properties config = new Properties();
@@ -30,7 +33,7 @@ public class CurrentWarmCity {
 	protected static String userName;
 	protected static String password;
 	protected static String key;
-	protected static String captialCitiesFPath;
+	protected static String captialCityFPath;
 	protected static Logger log = Logger.getLogger(CurrentWarmCity.class.getName());
 	protected final int HTTP_SUCCESS = 200;
 	
@@ -49,7 +52,7 @@ public class CurrentWarmCity {
 			validateUserURI = config.getProperty("validateUserURI");
 			userName = config.getProperty("userName");
 			password = config.getProperty("password");
-			captialCitiesFPath= config.getProperty("captialCitiesOfAustralia");
+			captialCityFPath= config.getProperty("captialCitiesOfAustralia");
 			
 			
 			  if (validateUserURI != null) { validateUserSpec = new
@@ -70,7 +73,7 @@ public class CurrentWarmCity {
 
 		JsonPath jsonPath;
 		Float temperature;
-		Float warmestTemperature=(float) 0.0;
+		Float warmestTemp=(float) 0.0;
 		Response weatherResp;
 		String warmestCity = null;
 		log.info("As a frequent flyer, I want to programmatically find the"
@@ -83,7 +86,7 @@ public class CurrentWarmCity {
 			log.info("The current user is a valid Frequent Flyer member");
 
 			// fetch the multiple cities to get the weather data	
-			Object captialCitiesList = weatherUtil.getDataFromFile(captialCitiesFPath);
+			Object captialCitiesList = weatherUtil.getDataFromFile(captialCityFPath);
 
 			JSONObject citiesJson = new JSONObject((Map) captialCitiesList);
 			Set set = citiesJson.entrySet();
@@ -97,12 +100,12 @@ public class CurrentWarmCity {
 				 jsonPath = weatherResp.jsonPath();
 				 temperature = jsonPath.getFloat("data[0].temp");
 				 log.info("Weather for the city " + item.getValue() + " is: " + temperature);
-				 if(temperature >= warmestTemperature) {
-					 warmestTemperature =temperature;
+				 if(temperature >= warmestTemp) {
+					 warmestTemp =temperature;
 					 warmestCity=(String)item.getValue();
 				 }
 			}
-			log.info("Warmest city is " + warmestCity + " is: " + warmestTemperature);
+			log.info("Warmest city is " + warmestCity + " is: " + warmestTemp);
 
 		}else {
 			log.info("The given user is not a valid Frequent Flyer member");

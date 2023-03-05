@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 
 
 /**
- * This class is used to test - get current weather data for multiple
-	 * cities in the world
+ * This class contain tests to get current weather data for multiple
+ * cities in the world
  * */
 public class CitiesWeatherDataTest {
 

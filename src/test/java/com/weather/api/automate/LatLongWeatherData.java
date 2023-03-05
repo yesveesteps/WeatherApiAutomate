@@ -19,6 +19,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+/*This class will contain tests to find the 
+ * temperature for a given latitude and longitude
+ * */
 public class LatLongWeatherData {
 	
 	protected static Properties config = new Properties();
@@ -74,6 +77,7 @@ public class LatLongWeatherData {
 		Response weatherResp;
 		log.info("As a frequent flyer, I want to get current weather data for the city at \n"
 				+ "	Latitude: -33.865143, Longitude: 151.209900");
+		// validate the user is a frequent flyer
 		int statusCode = weatherUtil.validateQFFUser(userName, password, validateUserSpec);
 
 		if (statusCode == HTTP_SUCCESS) {
@@ -83,9 +87,9 @@ public class LatLongWeatherData {
 			// fetch the coordinates to get the weather data	
 			Object coordinatesObj = weatherUtil.getDataFromFile(coordinatesFPath);
 			coordinatesJson = new JSONObject((Map) coordinatesObj);
-			//Set set = coordinatesJson.entrySet();
 			
-			weatherResp = weatherUtil.fetchWeatherDataLatLong((double)coordinatesJson.get("latitude"), (double)coordinatesJson.get("longitude"), key);
+			weatherResp = weatherUtil.fetchWeatherDataLatLong((double)coordinatesJson.
+							get("latitude"), (double)coordinatesJson.get("longitude"), key);
 			jsonPath = weatherResp.jsonPath();
 			temperature = jsonPath.getFloat("data[0].temp");
 			log.info("Temperature for the given lat long is:"+temperature);
