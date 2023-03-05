@@ -31,6 +31,6 @@ mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 
 Report:
 
-Test reports will be present in the Folder target/surefire-reports
+Test reports will be present in the Folder target/surefire-reports/emailable-report.html
 
 
