@@ -48,7 +48,6 @@ public class CitiesWeatherDataTest {
 	static WeatherUtils weatherUtil = new WeatherUtils();
 	
 	 
-
 	@BeforeTest
 	public static void setup() {
 		//load the data from property file
@@ -80,8 +79,6 @@ public class CitiesWeatherDataTest {
 	 */
 	@Test(groups = { "regression" })
 	public void TestWeatherForMultipleCities() {
-		
-		
 		JsonPath jsonPath;
 		Float temperature;
 		Response weatherResp;
