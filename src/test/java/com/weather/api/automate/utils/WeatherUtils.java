@@ -89,6 +89,7 @@ public class WeatherUtils {
 			
 			return res;
 		}
+		
 		/* Hit the Weather api endpoint for the given latitude and longitude for eg:
 		 * http://api.weatherbit.io/v2.0/current?lat=-33.86&lon=151.20&key=123
 		 * */

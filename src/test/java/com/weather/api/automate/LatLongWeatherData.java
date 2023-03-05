@@ -44,7 +44,8 @@ public class LatLongWeatherData {
 			file = weatherUtil.loadProperties();
 			config.load(file);
 			baseURI = config.getProperty("baseURI");
-			key = config.getProperty("key");
+			//key = System.getProperty("key");
+			key=config.getProperty("key");
 			validateUserURI = config.getProperty("validateUserURI");
 			userName = config.getProperty("userName");
 			password = config.getProperty("password");
@@ -64,7 +65,7 @@ public class LatLongWeatherData {
 	
 	/*AC2. “As a frequent flyer, I want to get current weather data for the city at 
 	 * Latitude: -33.865143, Longitude: 151.209900”.*/
-	@Test
+	@Test(groups = { "regression" })
 	public void TestWeatherDataLatLong() {
 		
 		float temperature;

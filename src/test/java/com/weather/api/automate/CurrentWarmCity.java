@@ -44,7 +44,8 @@ public class CurrentWarmCity {
 			file = weatherUtil.loadProperties();
 			config.load(file);
 			baseURI = config.getProperty("baseURI");
-			key = config.getProperty("key");
+			//key = System.getProperty("key");
+			key=config.getProperty("key");
 			validateUserURI = config.getProperty("validateUserURI");
 			userName = config.getProperty("userName");
 			password = config.getProperty("password");
@@ -63,7 +64,7 @@ public class CurrentWarmCity {
 	
 	/*AC3. “As a frequent flyer, 
 	 * I want to programmatically find the current warmest capital city in Australia”*/
-	@Test
+	@Test(groups = { "regression" })
 	public void FindWarmestCapitalCityInAustrlia() {
 		
 

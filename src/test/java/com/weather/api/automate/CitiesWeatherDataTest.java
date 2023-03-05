@@ -1,6 +1,8 @@
 package com.weather.api.automate;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -55,7 +57,8 @@ public class CitiesWeatherDataTest {
 			file = weatherUtil.loadProperties();
 			config.load(file);
 			baseURI = config.getProperty("baseURI");
-			key = config.getProperty("key");
+			//key = System.getProperty("key");
+			key=config.getProperty("key");
 			validateUserURI = config.getProperty("validateUserURI");
 			userName = config.getProperty("userName");
 			password = config.getProperty("password");
@@ -76,7 +79,7 @@ public class CitiesWeatherDataTest {
 	 * AC1. “As a frequent flyer, I want to get current weather data for multiple
 	 * cities in the world”.
 	 */
-	@Test
+	@Test(groups = { "regression" })
 	public void TestWeatherForMultipleCities() {
 		
 		
@@ -94,8 +97,6 @@ public class CitiesWeatherDataTest {
 
 			// fetch the multiple cities to get the weather data	
 			final Object citiesList = weatherUtil.getDataFromFile(multiCitiesFPath);
-
-			//System.out.println(citiesList);
 			JSONObject citiesJson = new JSONObject((Map) citiesList);
 			Set set = citiesJson.entrySet();
 			Iterator itr = set.iterator();
@@ -112,7 +113,7 @@ public class CitiesWeatherDataTest {
 
 		}else {
 			log.info("The given user is not a valid Frequent Flyer member");
-			Assert.assertEquals(statusCode, 200);
+			AssertJUnit.assertEquals(statusCode, 200);
 		}
 
 	}

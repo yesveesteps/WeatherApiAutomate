@@ -19,11 +19,11 @@ This will start a server for user validation service at port 3000.
 
 Command to execute all the tests:
 
-mvn test -DtestGroup=com/weather/api/automate
+mvn test -DtestGroup=com/weather/api/automate -Dkey=b19a40587d344e8fa34944a7e35de60d
 
 3) Command to execute a single test:
 
-mvn -Dtest=<classname>#<method name> test
+mvn -Dtest=<classname>#<method name> -Dkey=<key>test
 eg:
 
 mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
@@ -31,6 +31,6 @@ mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 
 Report:
 
-
+Test reports will be present in the Folder target/surefire-reports
 
 
