@@ -40,16 +40,8 @@ example:
 mvn -Dtest=LatLongWeatherData#TestWeatherDataLatLong test
 
 <h2> Project Structure </h2>
-
-
-├── src
-|-----test/java             # Automated tests source classes and utils.
-├──---test/resources        # config files
-├── target	
-|-----surefire-reports	    # generated test reports.  
-├── pom.xml                 # Build file
-├── testng.xml
-└── README.md
+  
+<img width="557" alt="image" src="https://user-images.githubusercontent.com/22021276/222982299-b4e15f57-dac7-4154-89b7-a66aa852608c.png">
 
 
 <h2> Report: </h2>
