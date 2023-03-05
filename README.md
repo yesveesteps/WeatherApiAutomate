@@ -1,3 +1,5 @@
+<img width="185" alt="image" src="https://user-images.githubusercontent.com/22021276/222979563-dfebbe9b-d342-4e0b-8b2d-a67543891023.png">
+
 <h1> Weather API Automation Suite </h1>
 
 What do I need?
