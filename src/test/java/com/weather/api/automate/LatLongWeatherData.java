@@ -29,7 +29,8 @@ public class LatLongWeatherData {
 	protected static String password;
 	protected static String key;
 	protected static String coordinatesFPath;
-	protected static Logger log = Logger.getLogger(LatLongWeatherData.class.getName());
+	protected static final Logger log = Logger.getLogger(LatLongWeatherData.class.getName());
+	protected final int HTTP_SUCCESS = 200;
 	
 	protected static WeatherUtils weatherUtil = new WeatherUtils();
 	
@@ -74,7 +75,7 @@ public class LatLongWeatherData {
 				+ "	Latitude: -33.865143, Longitude: 151.209900");
 		int statusCode = weatherUtil.validateQFFUser(userName, password, validateUserSpec);
 
-		if (statusCode == 200) {
+		if (statusCode == HTTP_SUCCESS) {
 
 			log.info("The current user is a valid Frequent Flyer member");
 

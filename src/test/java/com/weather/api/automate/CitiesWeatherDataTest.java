@@ -40,7 +40,8 @@ public class CitiesWeatherDataTest {
 	protected static String password;
 	protected static String key;
 	protected static String multiCitiesFPath;
-	protected static Logger log = Logger.getLogger(CitiesWeatherDataTest.class.getName());
+	protected final int HTTP_SUCCESS = 200;
+	protected static final Logger log = Logger.getLogger(CitiesWeatherDataTest.class.getName());
 	
 	static WeatherUtils weatherUtil = new WeatherUtils();
 	
@@ -87,7 +88,7 @@ public class CitiesWeatherDataTest {
 		// validate the user is a frequent flyer
 		int statusCode = weatherUtil.validateQFFUser(userName, password, validateUserSpec);
 
-		if (statusCode == 200) {
+		if (statusCode == HTTP_SUCCESS) {
 
 			log.info("The current user is a valid Frequent Flyer member");
 
@@ -100,14 +101,12 @@ public class CitiesWeatherDataTest {
 			Iterator itr = set.iterator();
 			while (itr.hasNext()) {
 				Map.Entry item = (Map.Entry) itr.next();
-
 				// for each city code fetch the weather data				
 				 weatherResp = weatherUtil.fetchWeatherData((String)item.getKey(), (String)item.getValue(), key);
 				 jsonPath = weatherResp.jsonPath();
 				 temperature = jsonPath.getFloat("data[0].temp");
-
 				
-				log.info("Weather for the city " + item.getValue() + " is: " + temperature);
+				log.info("Weather for the city" + item.getValue() + " is: " + temperature);
 
 			}
 

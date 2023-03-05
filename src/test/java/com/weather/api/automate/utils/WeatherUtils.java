@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
 import org.apache.commons.io.IOUtils;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -23,6 +24,11 @@ import io.restassured.specification.RequestSpecification;
 /*This class contains utils method for weather api project*/
 public class WeatherUtils {
 	
+	public WeatherUtils(){
+		//empty constructor
+	}
+	
+
 	/*This method will load the data from the json file path  
 	 * and return as a file Object*/
 	public Object getDataFromFile(final String filePath) {
@@ -37,7 +43,7 @@ public class WeatherUtils {
 			
  
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        	e.printStackTrace();
         }  catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -53,7 +59,7 @@ public class WeatherUtils {
 		
 		public int validateQFFUser(final String username, final String pwd, final RequestSpecification validateUserSpec) {
 			
-			int statuscode=404;
+			int statuscode;
 			// validate the user is a frequent flyer
 					Response res = given().spec(validateUserSpec).
 									queryParam("username", username).

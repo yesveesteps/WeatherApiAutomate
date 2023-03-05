@@ -32,6 +32,7 @@ public class CurrentWarmCity {
 	protected static String key;
 	protected static String captialCitiesFPath;
 	protected static Logger log = Logger.getLogger(CurrentWarmCity.class.getName());
+	protected final int HTTP_SUCCESS = 200;
 	
 	protected static WeatherUtils weatherUtil = new WeatherUtils();
 	
@@ -60,13 +61,15 @@ public class CurrentWarmCity {
 
 	}
 	
-	/*AC3. “As a frequent flyer, I want to programmatically find the current warmest capital city in Australia”*/
+	/*AC3. “As a frequent flyer, 
+	 * I want to programmatically find the current warmest capital city in Australia”*/
 	@Test
 	public void FindWarmestCapitalCityInAustrlia() {
 		
 
 		JsonPath jsonPath;
-		Float temperature, warmestTemperature=(float) 0.0;
+		Float temperature;
+		Float warmestTemperature=(float) 0.0;
 		Response weatherResp;
 		String warmestCity = null;
 		log.info("As a frequent flyer, I want to programmatically find the"
@@ -74,7 +77,7 @@ public class CurrentWarmCity {
 		// validate the user is a frequent flyer
 		int statusCode = weatherUtil.validateQFFUser(userName, password, validateUserSpec);
 
-		if (statusCode == 200) {
+		if (statusCode == HTTP_SUCCESS) {
 
 			log.info("The current user is a valid Frequent Flyer member");
 
@@ -85,10 +88,9 @@ public class CurrentWarmCity {
 			Set set = citiesJson.entrySet();
 			Iterator itr = set.iterator();
 			
+			// for each city code fetch the weather data	
 			while (itr.hasNext()) {
-				Map.Entry item = (Map.Entry) itr.next();
-
-				// for each city code fetch the weather data				
+				 Map.Entry item = (Map.Entry) itr.next();	
 				 weatherResp = weatherUtil.fetchWeatherData((String)item.getKey(), (String)item.getValue(), key);
 				 //get the temperature from the response
 				 jsonPath = weatherResp.jsonPath();
@@ -97,11 +99,7 @@ public class CurrentWarmCity {
 				 if(temperature >= warmestTemperature) {
 					 warmestTemperature =temperature;
 					 warmestCity=(String)item.getValue();
-					 
 				 }
-
-				
-
 			}
 			log.info("Warmest city is " + warmestCity + " is: " + warmestTemperature);
 
