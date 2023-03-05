@@ -25,7 +25,7 @@ This will start a http server at port 3000.
 
 Command to execute all the tests:
 
-mvn test
+mvn clean test
 
 (or)
 
