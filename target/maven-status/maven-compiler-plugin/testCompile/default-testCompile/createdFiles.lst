@@ -1,0 +1,4 @@
+com/weather/api/automate/LatLongWeatherData.class
+com/weather/api/automate/CitiesWeatherDataTest.class
+com/weather/api/automate/CurrentWarmCity.class
+com/weather/api/automate/utils/WeatherUtils.class

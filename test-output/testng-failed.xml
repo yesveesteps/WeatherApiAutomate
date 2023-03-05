@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.weather.api.automate.CitiesWeatherDataTest">
+      <class name="com.weather.api.automate.LatLongWeatherData">
         <methods>
-          <include name="TestWeatherForMultipleCities"/>
+          <include name="getWeatherDataLatLong"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.weather.api.automate.CitiesWeatherDataTest -->
+      </class> <!-- com.weather.api.automate.LatLongWeatherData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
