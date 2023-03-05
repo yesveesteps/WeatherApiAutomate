@@ -1,4 +1,4 @@
-Weather API Automation 
+<h1> Weather API Automation Suite </h1>
 
 What do I need?
 
@@ -39,5 +39,13 @@ Report:
 Test reports will be present in the Folder target/surefire-reports/emailable-report.html
   <img width="854" alt="image" src="https://user-images.githubusercontent.com/22021276/222979205-9a77c3ea-1554-4e37-bd2e-c01401b85e60.png">
 
+API reference:
 
+The metadata for this API used in this project can be found here: 
+
+https://www.weatherbit.io/api/meta
+
+The interactive swagger documentation for the API used in this project can be found here :
+
+https://www.weatherbit.io/api/swaggerui/weather-api-v2
 
